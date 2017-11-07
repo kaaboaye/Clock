@@ -24,7 +24,16 @@ namespace Clock
         private void Timer_Click(object sender, EventArgs e)
         {
             DateTime d = DateTime.Now;
-            TimeLabel.Text = $"{d.Hour}.{d.Minute}.{d.Second}";
+
+            string hh = d.Hour.ToString();
+            string mm = d.Minute.ToString();
+            string ss = d.Second.ToString();
+
+            if (d.Hour < 10) hh = $"0{hh}";
+            if (d.Minute < 10) mm = $"0{mm}";
+            if (d.Second < 10) ss = $"0{ss}";
+
+            TimeLabel.Text = $"{hh}.{mm}.{ss}";
         }
     }
 }
