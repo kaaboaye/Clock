@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Clock" Height="193.22" Width="456.356" Background="{x:Null}">
+    <Grid Background="White">
+        <Viewbox>
+            <TextBlock x:Name="TimeLabel">12.34.56</TextBlock>
+        </Viewbox>
     </Grid>
 </Window>
